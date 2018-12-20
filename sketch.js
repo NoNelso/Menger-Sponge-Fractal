@@ -1,4 +1,5 @@
 var a = 0;
+var w = 0;
 var sponge = [];
 
 function setup() {
@@ -11,13 +12,16 @@ function setup() {
 function draw() {
   background(50);
   stroke(255);
-  noFill();
+  // noFill();
   //translate(width / 2, height / 2);
-  rotateX(a);
+  rotateY(a);
+  rotateX(w);
   for (var i = 0; i < sponge.length; ++i) {
     sponge[i].show();
   }
-  a += 0.01;
+  a += 0.005;
+  w += 0.001;
+
 }
 
 function mousePressed() {
