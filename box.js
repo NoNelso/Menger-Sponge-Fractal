@@ -9,7 +9,7 @@ function Box(x, y, z, r) {
         for (var z = -1; z < 2; ++z) {
           var sum = abs(x) + abs(y) + abs(z);
           var newR = this.r / 3;
-          if (sum > 1) {
+          if (sum <= 1) {
             var b = new Box(this.pos.x + x * newR, this.pos.y + y * newR, this.pos.z + z * newR, newR);
             boxes.push(b);
           }
